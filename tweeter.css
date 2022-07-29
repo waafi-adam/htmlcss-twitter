@@ -1,0 +1,412 @@
+/* <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+</style> */
+/* <link rel="preconnect"href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"rel="stylesheet"> */
+:root {
+    --color-font-primary: #0F1419;
+    --color-font-secondary: #5b7083;
+    --color-font-highlighted: #1DA1F2;
+    --color-bg-highlighted: #E8F5FE;
+    --color-line: #EBEEF0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+p {
+    font-size: .8rem;
+    color: var(--color-font-secondary);
+}
+
+/* ============================
+LEFT CONTAINER
+===============================*/
+.left-container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 1px solid var(--color-line);
+    height: 100vh;
+
+    padding: .4rem;
+}
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav,
+.logo {
+    margin-top: 0.5rem;
+    padding: .5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.nav:hover,
+.logo:hover {
+    background-color: var(--color-bg-highlighted);
+    color: var(--color-font-highlighted);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.nav-container .fas,
+.nav-container .fab {
+    font-size: 1.5rem;
+}
+.fa-twitter {
+    color: var(--color-font-highlighted);
+}
+.nav-text {
+    display: none;
+    font-weight: bold;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+/* ============================
+MID CONTAINER
+===============================*/
+.mid-container {
+    flex-grow: 3;
+    border: 1px solid var(--color-line);
+    max-width: 37rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-section {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-line);
+    padding: .5rem;
+}
+
+.nav-section .fa-arrow-left {
+    color: var(--color-font-highlighted);
+    padding: .4rem;
+    background: #fff;
+    border-radius: 2rem;
+    margin: 0 1rem 0 0;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.fa-arrow-left:hover {
+    background-color: var(--color-bg-highlighted);
+    color: var(--color-font-highlighted);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.fa-badge-check {
+    color: var(--color-font-highlighted);
+    font-size: 1rem;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cover-photo {
+    /* background-image: url("./tweeter-imgs/1500x500.jpg"); */
+    background-size: cover;
+    background-position: center;
+    min-height: 120px;
+    max-height: 200px;
+}
+
+.profile-follow {
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+}
+.profile-photo {
+    height: 6rem;
+    width: 6rem;
+    /* background-image: url(https://pbs.twimg.com/profile_images/1404334078388670466/DgO3WL4S_400x400.jpg); */
+    background-size: cover;
+    border-radius: 4rem;
+    transform: translateY(-50%);
+    margin-left: 1rem;
+    border: 2px solid #fff;
+}
+
+.btn-follow {
+    margin: 1rem;
+    height: 2rem;
+    padding: 0 1rem;
+    background: #fff;
+    border: 1px solid var(--color-font-highlighted);
+    border-radius: 1rem;
+    color: var(--color-font-highlighted);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-follow:hover {
+    background: var(--color-bg-highlighted);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.profile-details{
+    padding:0 1rem;
+}
+
+.profile-details p{
+    font-size:.95rem;;
+    margin-bottom: .5rem;
+}
+.profile-details > h1,
+.profile-details > h1 > .fa-badge-check {
+    font-size: 1.25rem;
+}
+.bold{
+    font-weight: 700;
+    color: var(--color-font-primary);
+}
+.profile-details p:nth-child(5){
+    display:inline-block;
+    margin-left: 1rem;
+}
+.profile-details p:nth-child(4) {
+    display: inline-block;
+}
+
+
+.mid-section {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--color-line);
+    /* padding:1rem 0 ; */
+}
+
+.info-selection {
+    font-weight: bold;
+    color: var(--color-font-secondary);
+    padding: 1rem;
+    transition: .3s;
+}
+
+.info-selection:hover {
+    background: var(--color-bg-highlighted);
+    transition: .3s;
+    cursor: pointer
+}
+
+.info-selected {
+    color: var(--color-font-highlighted);
+    border-bottom: 4px solid var(--color-font-highlighted);
+}
+
+.tweet-container {
+    display: flex;
+    padding: .5rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.tweet-profilePic {
+    height: 3rem;
+    width: 3rem;
+    /* background-image: url(https://pbs.twimg.com/profile_images/1404334078388670466/DgO3WL4S_400x400.jpg); */
+    background-size: cover;
+    border-radius: 2rem;
+    margin-right: .5rem;
+}
+
+.tweet-profile {
+    display: flex
+        /* flex-direction:row; */
+        /* align-items: center; */
+}
+
+.tweet-profile>p {
+    margin-left: .5rem;
+}
+
+.tweet-content p {
+    color: var(--color-font-primary);
+    padding: .5rem 0;
+}
+
+/* ============================
+RIGHT CONTAINER
+===============================*/
+.right-container {
+    flex-grow: 2;
+    display: none;
+    padding: .2rem 1rem;
+}
+.right-limit-container{
+    width: 300px;
+}
+
+
+.search-container{
+    background-color: #EBEEF0;
+    padding: .7rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    color: var(--color-font-secondary);
+}
+.search-container .fa-search{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+.searchbar{
+    font-size: 1rem;
+    border: none;
+    background-color: #EBEEF0;
+}
+.search-container:focus-within{
+    background-color: #fff;
+    border: 1px solid var(--color-font-highlighted);
+    color: var(--color-font-highlighted);
+}
+input[type="search"]:focus{
+    outline:none;
+    background: #fff;
+    color: var(--color-font-primary);
+}
+.sections{
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
+.signup-section{
+    border: 1px solid var(--color-line);
+}
+.signup-section h1,
+.signup-section p{
+    margin-bottom:1rem;
+}
+.btn-signup{
+    color: #fff;
+    background: var(--color-font-highlighted);
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    padding: .5rem 0;
+    transition: .3s;
+}
+.btn-signup:hover{
+    background: #1A92DC;
+    transition: .3s;
+    cursor: pointer;
+}
+
+
+.gallery-container{
+    width: 100%;
+    height: 188px ;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+.gallery-row{
+    height: 49% ;
+}
+.pic{
+    height: 100%;
+    width: calc(100%/3.1);
+    display: inline-block;
+}
+.pic{
+    background-size: cover;
+    transition: .3s;
+}
+.pic:hover{
+    opacity: .8;
+    transition: .3s;
+    cursor: pointer;
+}
+.pic-1{
+    background-image: url(https://pbs.twimg.com/ext_tw_video_thumb/1404711844783312899/pu/img/JhofMa-LfDrS9RmU?format=jpg&name=240x240);
+    border-top-left-radius: 1rem;
+}
+.pic-2{
+    background-image: url(https://pbs.twimg.com/media/E36FsLMWYAEOwtn?format=jpg&name=large);
+}
+.pic-3{
+    background-image: url(https://pbs.twimg.com/media/E30W3BNVEAYRW5E?format=jpg&name=120x120);
+    border-top-right-radius: 1rem;
+}
+.pic-4{
+    background-image: url(https://pbs.twimg.com/media/E30IsJHVIAEZ_Ak?format=jpg&name=large);
+    border-bottom-left-radius: 1rem;
+}
+.pic-5 {
+    background-image: url(https://pbs.twimg.com/media/E30IWgIUUAEb9yO?format=jpg&name=large);
+}
+.pic-6 {
+    background-image: url(https://pbs.twimg.com/media/E3vegxVVIAIGZgX?format=jpg&name=medium);
+    border-bottom-right-radius: 1rem;
+}
+
+
+.suggestion-section{
+    
+}
+@media only screen and (min-width: 800px) {
+    .left-container {
+        flex-grow: 1;
+    }
+    .right-container {
+        flex-grow: 2;
+        display: block;
+    }
+    .right-limit-container {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .right-limit-container {
+        display: block;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .left-container{
+        flex-grow: 2;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5rem;
+    }
+    .nav-container{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .nav-text {
+        display: block;
+        text-align:left;
+    }
+}

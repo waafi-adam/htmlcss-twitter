@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tweeter Project</title>
+    <link rel="stylesheet" href="tweeter.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="left-container">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="nav">
+          <i class="fas fa-search"></i>
+          <span class="nav-text">Explore</span>
+        </div>
+        <div class="nav">
+          <i class="fas fa-cog"></i>
+          <span class="nav-text">Setting</span>
+        </div>
+      </div>
+    </div>
+    <div class="mid-container">
+      <div class="nav-section">
+        <i class="fas fa-arrow-left"></i>
+        <div class="nav-profile"></div>
+      </div>
+      <div class="top-section">
+        <div class="cover-photo"></div>
+        <div class="profile-follow">
+          <div class="profile-photo"></div>
+          <button class="btn btn-follow">Follow</button>
+        </div>
+        <div class="profile-details"></div>
+      </div>
+      <div class="mid-section">
+        <div class="info-selected info-selection">Tweets</div>
+        <div class="info-selection">Tweets & replies</div>
+        <div class="info-selection">Media</div>
+        <div class="info-selection">Likes</div>
+      </div>
+      <div class="bottom-section"></div>
+    </div>
+    <div class="right-container">
+      <div class="right-limit-container">
+        <label class="search-container">
+          <div class="searchIcon-container">
+            <i class="fas fa-search"></i>
+          </div>
+          <input
+            class="searchbar"
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="Search Twitter"
+          />
+        </label>
+        <div class="sections signup-section">
+          <h1>New to Twitter?</h1>
+          <p>Sign up now to get your own personalized timeline!</p>
+          <button class="btn btn-signup">Sign up</button>
+        </div>
+        <div class="sections gallery-container">
+          <div class="gallery-row">
+            <div class="pic pic-1"></div>
+            <div class="pic pic-2"></div>
+            <div class="pic pic-3"></div>
+          </div>
+          <div class="gallery-row">
+            <div class="pic pic-4"></div>
+            <div class="pic pic-5"></div>
+            <div class="pic pic-6"></div>
+          </div>
+        </div>
+        <!-- <div class="sections suggestion-section">
+            <h1>You might like</h1>
+            <div class="users-container"></div>
+            <div class="showmore-tab">
+                <a href="#">Show More</a>
+            </div>
+        </div>
+        <div class="sections trends-section">
+            <h2>Trends for you</h2>
+            <div class="trends-container"></div>
+            <div class="showmore-tab">
+                <a href="#">Show More</a>
+            </div>
+        </div>
+        <div class="sections topics-section">
+            <h2>Trends for you</h2>
+            <div class="trends-container"></div>
+            <div class="showmore-tab">
+                <a href="#">Show More</a>
+            </div>
+        </div>
+        <ul class="sections footer-section">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Ads Info</a></li>
+            <li><a href="#">More...</a></li>
+            <li>&copy; 2021 Twitter, Inc.</li>
+        </ul> -->
+      </div>
+    </div>
+  </body>
+  <script src="tweeter.js"></script>
+</html>
